@@ -97,7 +97,6 @@ def mixed_search_upd(seq, main_dict):
             s_words[i] = [s_words[i]]
     combos = make_combos(s_words)
 
-    ans = []
     for combo in combos:
         ans_dict = search_func(main_dict, ans_dict, combo.split('.'))
     return ans_dict
@@ -121,13 +120,10 @@ def my_form_post():
     with open('templates\\all_answers.txt', 'w', encoding='utf-8') as f:
         f.write('\n\n'.join(no_tag_list))
     page_ans = '<br><br>'.join(ans_list)
-    with open('templates\\answers.html', 'w', encoding='utf-8') as f:
-        f.write(page_ans)
-    return render_template('answer.html', variable=len(no_tag_list))
+    return render_template('answer.html', variable=len(no_tag_list), answers=page_ans)
 
 @app.route('/download_file.html')
 def download():
-    # return render_template('templates\\all_answers.txt')
     return send_file('templates\\all_answers.txt', as_attachment=True, cache_timeout=0)
 
 if __name__ == '__main__':
