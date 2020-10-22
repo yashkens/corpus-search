@@ -1,1 +1,1 @@
-bot: python3 corpus_search.py
+web: gunicorn app:corpus_search
