@@ -1,7 +1,17 @@
 <!DOCTYPE html>
-<p>Найдено предложений:</p>
-{{variable}}
-<br><br>
-{{answers|safe}}
+<head>
+  <style>
+    div {margin: 15px 15px;}
+  </style>
+</head>
+<body>
+
+<p>Найдено предложений: {{variable}}</p>
 <br>
-<a href="/download_file.html" target="_blank">Все ответы</a>
+<div>
+{{answers|safe}}
+</div>
+<br>
+<p>Отображается не более 20 примеров. Остальные можно скачать по ссылке: <a href="/download_file.html" target="_blank">Все ответы</a></p>
+
+</body>
