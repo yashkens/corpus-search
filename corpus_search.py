@@ -1,6 +1,4 @@
 import os
-from nltk import sent_tokenize
-from pprint import pprint
 from pymorphy2.tokenizers import simple_word_tokenize
 import pymorphy2
 morph = pymorphy2.MorphAnalyzer()
@@ -8,7 +6,7 @@ import pandas as pd
 import re
 from itertools import product
 
-from flask import Flask, request, render_template, send_file, send_from_directory
+from flask import Flask, request, render_template, send_file
 app = Flask(__name__)
 
 @app.route('/')
