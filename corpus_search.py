@@ -130,4 +130,5 @@ def download():
     # return render_template('templates\\all_answers.txt')
     return send_file('templates\\all_answers.txt', as_attachment=True, cache_timeout=0)
 
-app.run()
+if __name__ == '__main__':
+    app.run()
