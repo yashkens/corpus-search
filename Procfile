@@ -1,1 +1,1 @@
-web: gunicorn app:corpus_search
+web: gunicorn corpus_search:app
